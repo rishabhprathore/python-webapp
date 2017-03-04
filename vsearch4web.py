@@ -11,7 +11,8 @@ def search4phrase(phrase: str, letters: str = 'aeiou') -> set:
 def log_requst(req: 'flask_request', res: str) -> None:
     with open('vsearch.log', 'a') as log:
         print(
-            req.form, req.remote_addr, req.user_agent, res, file=log, sep='|')
+            req.form, request.environ['REMOTE_ADDR'],
+            req.user_agent, res, file=log, sep='|')
 
 
 @app.route('/')
