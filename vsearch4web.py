@@ -10,6 +10,7 @@ def search4phrase(phrase: str, letters: str = 'aeiou') -> set:
 
 
 def log_requst(req: 'flask_request', res: str) -> None:
+    """Log details of the web request and the results """
     dbconfig = {
     'host': '127.0.0.1',
     'user': 'vsearch',
